@@ -17,29 +17,422 @@
   <link rel="icon" type="image/png" sizes="512x512" href="./assets/favicons/android-chrome-512x512.png" />
   <link rel="manifest" href="./assets/favicons/site.webmanifest" />
 
-  <!-- Google Font -->
+  <!-- Montserrat & Open Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;700&display=swap"
+    rel="stylesheet">
 
   <!-- Tailwind & daisyUI -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Custom Stylesheets -->
+  <!-- Custom Tailwind Styles -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'text': 'rgb(5, 5, 5)',
+            'background': 'rgb(250, 250, 250)',
+            'primary': 'rgb(248, 85, 89)',
+            'secondary': 'rgb(245, 214, 214)',
+            'accent': 'rgb(207, 48, 51)',
+            'mute': 'rgba(18.06, 18.06, 18.06, 0.60)',
+            'blackish': 'rgba(18, 18, 18, 1)'
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Custom Internal Styles -->
   <style>
-    .font-lato {
-      font-family: 'Lato', sans-serif;
+    .font-montserrat {
+      /* Montserrat - For stylish headings and titles. */
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .font-opensans {
+      /* Open Sans - Clear and readable for body text. */
+      font-family: 'Open Sans', sans-serif;
     }
   </style>
 </head>
 
-<body>
-  <header>
-    
+<body class="bg-background">
+  <header class="container mx-auto">
+    <!-- Navigation Start -->
+    <nav>
+      <div class="navbar bg-accent rounded-full my-7 p-5">
+        <div class="navbar-start hidden md:flex ">
+          <ul class="menu menu-horizontal px-1 font-opensans font-medium text-white text-lg capitalize">
+            <li><a>home</a></li>
+            <li><a>shop</a></li>
+            <li><a>about</a></li>
+            <li><a>contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-center">
+          <img class="md:w-11 w-9" src="./assets/logo.png" alt="logo"><a
+            class="font-montserrat font-bold text-white normal-case text-2xl md:text-4xl mx-2">FruitPicks</a>
+        </div>
+        <div class="navbar-end md:mr-4">
+          <input type="text" placeholder="Search here" class="input  md:w-[68%] rounded-full relative" />
+          <img class="absolute md:mr-4" src="./assets/images/icons/search.svg" alt="search">
+        </div>
+      </div>
+    </nav>
+    <!-- Navigation End -->
+    <!-- Banner+Slider Start -->
+    <div class="carousel w-full my-12 rounded-lg">
+      <!-- Banner+Slider 1 -->
+      <div id="slide1" class="carousel-item relative w-full">
+        <div class="hero min-h-full md:h-[500px] " style="background-image: url(./assets/images/banners/banner1.png);">
+          <div class="hero-overlay bg-opacity-0 bg-gradient-to-b from-black to-transparent"></div>
+          <div class="hero-content text-center">
+            <div class="w-[70%]">
+              <h1 class="mb-5 text-7xl font-extrabold font-montserrat text-white">Exotic tastes at your doorstep</h1>
+              <p class="mb-5 font-opensans text-white font-medium text-xl">We supply highly quality organic products</p>
+              <button
+                class="btn bg-accent font-montserrat font-extrabold border-transparent text-white capitalize text-lg">shop
+                now</button>
+            </div>
+          </div>
+        </div>
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide4" class="btn btn-circle bg-blackish text-white border-transparent text-xl">❮</a>
+          <a href="#slide2" class="btn btn-circle bg-blackish text-white border-transparent text-xl">❯</a>
+        </div>
+      </div>
+      <!-- Banner+Slider 2 -->
+      <div id="slide2" class="carousel-item relative w-full">
+        <div class="hero min-h-full md:h-[500px] " style="background-image: url(./assets/images/banners/banner2.png);">
+          <div class="hero-overlay bg-opacity-0 bg-gradient-to-b from-black to-transparent"></div>
+          <div class="hero-content text-center">
+            <div class="w-[70%]">
+              <h1 class="mb-5 text-7xl font-extrabold font-montserrat text-white">Exotic tastes at your doorstep</h1>
+              <p class="mb-5 font-opensans text-white font-medium text-xl">We supply highly quality organic products</p>
+              <button
+                class="btn bg-accent font-montserrat font-extrabold border-transparent text-white capitalize text-lg">shop
+                now</button>
+            </div>
+          </div>
+        </div>
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide1" class="btn btn-circle bg-blackish text-white border-transparent text-xl">❮</a>
+          <a href="#slide3" class="btn btn-circle bg-blackish text-white border-transparent text-xl">❯</a>
+        </div>
+      </div>
+      <!-- Banner+Slider 3 -->
+      <div id="slide3" class="carousel-item relative w-full">
+        <div class="hero min-h-full md:h-[500px] " style="background-image: url(./assets/images/banners/banner3.png);">
+          <div class="hero-overlay bg-opacity-0 bg-gradient-to-b from-black to-transparent"></div>
+          <div class="hero-content text-center">
+            <div class="w-[70%]">
+              <h1 class="mb-5 text-7xl font-extrabold font-montserrat text-white">Exotic tastes at your doorstep</h1>
+              <p class="mb-5 font-opensans text-white font-medium text-xl">We supply highly quality organic products</p>
+              <button
+                class="btn bg-accent font-montserrat font-extrabold border-transparent text-white capitalize text-lg">shop
+                now</button>
+            </div>
+          </div>
+        </div>
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide2" class="btn btn-circle bg-blackish text-white border-transparent text-xl">❮</a>
+          <a href="#slide4" class="btn btn-circle bg-blackish text-white border-transparent text-xl">❯</a>
+        </div>
+      </div>
+      <!-- Banner+Slider 4 -->
+      <div id="slide4" class="carousel-item relative w-full">
+        <div class="hero min-h-full md:h-[500px] " style="background-image: url(./assets/images/banners/banner4.png);">
+          <div class="hero-overlay bg-opacity-0 bg-gradient-to-b from-black to-transparent"></div>
+          <div class="hero-content text-center">
+            <div class="w-[70%]">
+              <h1 class="mb-5 text-7xl font-extrabold font-montserrat text-white">Exotic tastes at your doorstep</h1>
+              <p class="mb-5 font-opensans text-white font-medium text-xl">We supply highly quality organic products</p>
+              <button
+                class="btn bg-accent font-montserrat font-extrabold border-transparent text-white capitalize text-lg">shop
+                now</button>
+            </div>
+          </div>
+        </div>
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide3" class="btn btn-circle bg-blackish text-white border-transparent text-xl">❮</a>
+          <a href="#slide1" class="btn btn-circle bg-blackish text-white border-transparent text-xl">❯</a>
+        </div>
+      </div>
+    </div>
+    <!-- Banner+Slider End -->
   </header>
-  <main></main>
-  <footer></footer>
+  <main class="container mx-auto">
+    <!-- DotD Section Start -->
+    <section class="my-32">
+      <div class="flex items-center justify-between">
+        <div class="w-2/3">
+          <h1 class="font-montserrat font-extrabold text-5xl text-blackish">Deal of the day</h1>
+          <p class="font-opensans font-medium text-base text-mute  my-4">Contrary to popular belief, is not simply
+            random
+            text. It has roots in a piece of classical <br> Latin literature from 45 BC, making it over 2000 years old.
+          </p>
+        </div>
+        <div>
+          <div class="grid grid-flow-col gap-5 text-center auto-cols-max capitalize font-opensans text-base text-mute">
+            <div class="flex flex-col">
+              <span class="countdown font-montserrat font-extrabold text-5xl text-blackish">
+                <span style="--value:15;"></span>
+              </span>
+              days
+            </div>
+            <img class="text-3xl mt-3" src="./assets/images/icons/3dot.svg" alt="">
+            <div class="flex flex-col">
+              <span class="countdown font-montserrat font-extrabold text-5xl text-blackish">
+                <span style="--value:10;"></span>
+              </span>
+              hours
+            </div>
+            <img class="text-3xl mt-3" src="./assets/images/icons/3dot.svg" alt="">
+            <div class="flex flex-col">
+              <span class="countdown font-montserrat font-extrabold text-5xl text-blackish">
+                <span style="--value:24;"></span>
+              </span>
+              min
+            </div>
+            <img class="text-3xl mt-3" src="./assets/images/icons/3dot.svg" alt="">
+            <div class="flex flex-col">
+              <span class="countdown font-montserrat font-extrabold text-5xl text-blackish">
+                <span style="--value:40;"></span>
+              </span>
+              sec
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-20">
+        <!-- First Card -->
+        <div class="card w-full bg-base-100 shadow-xl rounded-lg border-[0.50px] border-solid ">
+          <figure class="px-10 pt-10">
+            <img src="./assets/images/dotd/fruit6.png" alt="apple" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title font-montserrat font-bold text-2xl text-blackish">12.90$ - 18.85$</h2>
+            <img class="my-3" src="./assets/images/icons/hr.svg" alt="hr">
+            <h3 class="font-opensans font-medium text-base text-mute">Apples</h3>
+            <div class="rating rating-md rating-half my-3">
+              <input type="radio" name="rating-5/2" class="rating-hidden" />
+              <input type="radio" name="rating-5/2" class="bg-primary mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-5/2" class="bg-primary mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-5/2" class="bg-primary mask mask-star-2 mask-half-1" checked />
+              <input type="radio" name="rating-5/2" class="bg-primary mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-5/2" class="bg-primary mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-5/2" class="bg-primary mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-5/2" class="bg-primary mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-5/2" class="bg-primary mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-5/2" class="bg-primary mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-5/2" class="bg-primary mask mask-star-2 mask-half-2" />
+            </div>
+            <h2 class="font-montserrat font-bold text-lg text-primary">Details</h2>
+          </div>
+        </div>
+        <!-- Second Card -->
+        <div class="card w-full bg-base-100 shadow-xl rounded-lg border-[0.50px] border-solid">
+          <figure class="px-10 pt-10">
+            <img src="./assets/images/dotd/fruit7.png" alt="apple" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title font-montserrat font-bold text-2xl text-blackish">12.90$ - 18.85$</h2>
+            <img class="my-3" src="./assets/images/icons/hr.svg" alt="hr">
+            <h3 class="font-opensans font-medium text-base text-mute">Apples</h3>
+            <div class="rating rating-md rating-half my-3">
+              <input type="radio" name="rating-5/3" class="rating-hidden" />
+              <input type="radio" name="rating-5/3" class="bg-primary mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-5/3" class="bg-primary mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-5/3" class="bg-primary mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-5/3" class="bg-primary mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-5/3" class="bg-primary mask mask-star-2 mask-half-1" checked />
+              <input type="radio" name="rating-5/3" class="bg-primary mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-5/3" class="bg-primary mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-5/3" class="bg-primary mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-5/3" class="bg-primary mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-5/3" class="bg-primary mask mask-star-2 mask-half-2" />
+            </div>
+            <h2 class="font-montserrat font-bold text-lg text-primary">Details</h2>
+          </div>
+        </div>
+        <!-- Third Card -->
+        <div class="card w-full bg-base-100 shadow-xl rounded-lg border-[0.50px] border-solid">
+          <figure class="px-10 pt-10">
+            <img src="./assets/images/dotd/fruit8.png" alt="apple" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title font-montserrat font-bold text-2xl text-blackish">12.90$ - 18.85$</h2>
+            <img class="my-3" src="./assets/images/icons/hr.svg" alt="hr">
+            <h3 class="font-opensans font-medium text-base text-mute">Apples</h3>
+            <div class="rating rating-md rating-half my-3">
+              <input type="radio" name="rating-5/4" class="rating-hidden" />
+              <input type="radio" name="rating-5/4" class="bg-primary mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-5/4" class="bg-primary mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-5/4" class="bg-primary mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-5/4" class="bg-primary mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-5/4" class="bg-primary mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-5/4" class="bg-primary mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-5/4" class="bg-primary mask mask-star-2 mask-half-1" checked />
+              <input type="radio" name="rating-5/4" class="bg-primary mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-5/4" class="bg-primary mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-5/4" class="bg-primary mask mask-star-2 mask-half-2" />
+            </div>
+            <h2 class="font-montserrat font-bold text-lg text-primary">Details</h2>
+          </div>
+        </div>
+        <!-- Fourth Card -->
+        <div class="card w-full bg-base-100 shadow-xl rounded-lg border-[0.50px] border-solid">
+          <figure class="px-10 pt-10">
+            <img src="./assets/images/dotd/fruit9.png" alt="apple" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title font-montserrat font-bold text-2xl text-blackish">12.90$ - 18.85$</h2>
+            <img class="my-3" src="./assets/images/icons/hr.svg" alt="hr">
+            <h3 class="font-opensans font-medium text-base text-mute">Apples</h3>
+            <div class="rating rating-md rating-half my-3">
+              <input type="radio" name="rating-5/5" class="rating-hidden" />
+              <input type="radio" name="rating-5/5" class="bg-primary mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-5/5" class="bg-primary mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-5/5" class="bg-primary mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-5/5" class="bg-primary mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-5/5" class="bg-primary mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-5/5" class="bg-primary mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-5/5" class="bg-primary mask mask-star-2 mask-half-1" />
+              <input type="radio" name="rating-5/5" class="bg-primary mask mask-star-2 mask-half-2" />
+              <input type="radio" name="rating-5/5" class="bg-primary mask mask-star-2 mask-half-1" checked />
+              <input type="radio" name="rating-5/5" class="bg-primary mask mask-star-2 mask-half-2" />
+            </div>
+            <h2 class="font-montserrat font-bold text-lg text-primary">Details</h2>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button
+          class="btn bg-accent font-montserrat font-extrabold border-transparent text-white capitalize text-lg">view all
+        </button>
+      </div>
+    </section>
+    <!-- DotD Section End -->
+    <!-- Team Section Start -->
+    <section class="my-20">
+      <div class="w-full">
+        <div class="hero min-h-full md:h-[600px] rounded-lg"
+          style="background-image: url(./assets/images/team/team.png);">
+          <div class="hero-overlay bg-opacity-30 bg-gradient-to-b from-black to-transparent rounded-lg"></div>
+          <div class="hero-content text-center flex-col">
+            <div class="mt-5">
+              <h1 class="mb-5 text-5xl font-extrabold font-montserrat text-white">Meet the team section</h1>
+              <p class="mb-5 font-opensans text-white font-medium text-base">Contrary to popular belief, is not simply
+                random text. It has roots in a piece of classical <br> Latin literature from 45 BC, making it over 2000
+                years
+                old.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <!-- First Card -->
+              <div class="card w-full ">
+                <figure class="px-10 pt-10">
+                  <img src="./assets/images/team/member1.png" alt="apple" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title font-montserrat font-bold text-2xl text-white">Awlad Hossain</h2>
+                  <h3 class="font-opensans font-medium text-base text-white">Fruits Expert</h3>
+                  <div class="mt-2">
+                    <img class="inline-block mr-2 cursor-pointer" src="./assets/images/icons/fb.svg" alt="fb">
+                    <img class="inline-block mr-2 cursor-pointer" src="./assets/images/icons/tt.svg" alt="tt">
+                    <img class="inline-block cursor-pointer" src="./assets/images/icons/li.svg" alt="li">
+                  </div>
+                </div>
+              </div>
+              <!-- Second Card -->
+              <div class="card w-full ">
+                <figure class="px-10 pt-10">
+                  <img src="./assets/images/team/member2.png" alt="apple" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title font-montserrat font-bold text-2xl text-white">Awlad Hossain</h2>
+                  <h3 class="font-opensans font-medium text-base text-white">Fruits Expert</h3>
+                  <div class="mt-2">
+                    <img class="inline-block mr-2 cursor-pointer" src="./assets/images/icons/fb.svg" alt="fb">
+                    <img class="inline-block mr-2 cursor-pointer" src="./assets/images/icons/tt.svg" alt="tt">
+                    <img class="inline-block cursor-pointer" src="./assets/images/icons/li.svg" alt="li">
+                  </div>
+                </div>
+              </div>
+              <!-- Third Card -->
+              <div class="card w-full ">
+                <figure class="px-10 pt-10">
+                  <img src="./assets/images/team/member3.png" alt="apple" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title font-montserrat font-bold text-2xl text-white">Awlad Hossain</h2>
+                  <h3 class="font-opensans font-medium text-base text-white">Fruits Expert</h3>
+                  <div class="mt-2">
+                    <img class="inline-block mr-2 cursor-pointer" src="./assets/images/icons/fb.svg" alt="fb">
+                    <img class="inline-block mr-2 cursor-pointer" src="./assets/images/icons/tt.svg" alt="tt">
+                    <img class="inline-block cursor-pointer" src="./assets/images/icons/li.svg" alt="li">
+                  </div>
+                </div>
+              </div>
+              <!-- Fourth Card -->
+              <div class="card w-full ">
+                <figure class="px-10 pt-10">
+                  <img src="./assets/images/team/member4.png" alt="apple" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title font-montserrat font-bold text-2xl text-white">Awlad Hossain</h2>
+                  <h3 class="font-opensans font-medium text-base text-white">Fruits Expert</h3>
+                  <div class="mt-2">
+                    <img class="inline-block mr-2 cursor-pointer" src="./assets/images/icons/fb.svg" alt="fb">
+                    <img class="inline-block mr-2 cursor-pointer" src="./assets/images/icons/tt.svg" alt="tt">
+                    <img class="inline-block cursor-pointer" src="./assets/images/icons/li.svg" alt="li">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Team Section End -->
+  </main>
+  <footer class="footer footer-center p-10 bg-blackish text-base-content rounded">
+    <div class="flex">
+      <img class="md:w-11 w-9" src="./assets/logo.png" alt="logo"><a
+        class="font-montserrat font-bold text-white normal-case text-2xl md:text-4xl">FruitPicks</a>
+    </div>
+    <div class="grid grid-flow-col gap-4 text-gray-400">
+      <a class="link link-hover">Home</a>
+      <a class="link link-hover">Shop</a>
+      <a class="link link-hover">Privacy Policy</a>
+      <a class="link link-hover">Terms and Conditions</a>
+      <a class="link link-hover">Contact</a>
+      <a class="link link-hover">Support</a>
+    </div>
+    <div>
+      <div class="grid grid-flow-col gap-4">
+        <a class="cursor-pointer"><img src="./assets/images/icons/facebook.svg" alt="fb" /> </a>
+        <a class="cursor-pointer"><img src="./assets/images/icons/instagram.svg" alt="ig" /> </a>
+        <a class="cursor-pointer"><img src="./assets/images/icons/tiktok.svg" alt="tt" /> </a>
+        <a class="cursor-pointer"><img src="./assets/images/icons/linkedin.svg" alt="tw" /> </a>
+        <a class="cursor-pointer"><img src="./assets/images/icons/twitter.svg" alt="li" /> </a>
+      </div>
+    </div>
+    <div>
+      <p class="text-gray-400">Copyright &copy; 2023 FruitPicks. Designed by
+        <a class="link link-hover text-primary" href="https://github.com/devbytemehedi">Mehedi Hasan</a>
+      </p>
+    </div>
+    <div>
+      <a href="https://github.com/devbytemehedi/fruitpicks" target="_blank"
+        class="btn bg-accent font-montserrat font-bold border-transparent text-white capitalize text-base">source
+        code</a>
+    </div>
+  </footer>
 </body>
 
 </html>
