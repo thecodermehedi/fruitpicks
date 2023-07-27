@@ -61,12 +61,12 @@
   </style>
 </head>
 
-<body class="bg-background">
-  <header class="container mx-auto">
+<body class=" bg-white lg:bg-background">
+  <header class="container lg:mx-auto">
     <!-- Navigation Start -->
     <nav>
-      <div class="navbar bg-accent rounded-full my-7 p-5">
-        <div class="navbar-start hidden md:flex ">
+      <div class="navbar  lg:bg-accent rounded-full my-7 p-5">
+        <div class="navbar-start hidden lg:flex ">
           <ul class="menu menu-horizontal px-1 font-opensans font-medium text-white text-lg capitalize">
             <li><a>home</a></li>
             <li><a>shop</a></li>
@@ -76,11 +76,52 @@
         </div>
         <div class="navbar-center">
           <img class="md:w-11 w-9" src="./assets/logo.png" alt="logo"><a
-            class="font-montserrat font-bold text-white normal-case text-2xl md:text-4xl mx-2">FruitPicks</a>
+            class="font-montserrat font-bold text-blakish lg:text-white normal-case text-2xl md:text-4xl mx-2">FruitPicks</a>
         </div>
-        <div class="navbar-end md:mr-4">
-          <input type="text" placeholder="Search here" class="input  md:w-[68%] rounded-full relative" />
-          <img class="absolute md:mr-4" src="./assets/images/icons/search.svg" alt="search">
+        <div class="navbar-end invisible lg:visible lg:mr-4">
+          <input type="text" placeholder="Search here" class="input md:w-[68%] rounded-full relative" />
+          <img class="absolute mr-4" src="./assets/images/icons/search.svg" alt="search">
+        </div>
+        <div class="dropdown dropdown-end block lg:hidden">
+          <label tabindex="0" class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              class="inline-block w-8 h-8 stroke-current">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+              </path>
+            </svg>
+          </label>
+          <ul tabindex="0"
+            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-fit font-opensans font-medium capitalize">
+            <li><a>
+                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10.55 2.533a2.25 2.25 0 0 1 2.9 0l6.75 5.695c.508.427.8 1.056.8 1.72v9.802a1.75 1.75 0 0 1-1.75 1.75h-3a1.75 1.75 0 0 1-1.75-1.75v-5a.75.75 0 0 0-.75-.75h-3.5a.75.75 0 0 0-.75.75v5a1.75 1.75 0 0 1-1.75 1.75h-3A1.75 1.75 0 0 1 3 19.75V9.947c0-.663.292-1.292.8-1.72l6.75-5.694Z"
+                    fill="#212121" />
+                </svg>
+                home
+              </a></li>
+            <li><a>
+                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7 7V5a3 3 0 0 1 5-2.236A3 3 0 0 1 17 5v2h1.5A1.5 1.5 0 0 1 20 8.5V18a3.997 3.997 0 0 1-1.825 3.357l-.545-.096c-.775-.136-1.574-.563-2.175-1.172-.6-.609-.955-1.346-.955-2.089V7h1V5a1.5 1.5 0 0 0-2.656-.956c.101.3.156.622.156.956v13c0 1.229.582 2.326 1.387 3.142a5.8 5.8 0 0 0 1.08.858H8a4 4 0 0 1-4-4V8.5A1.5 1.5 0 0 1 5.5 7H7Zm1.5-2v2h3V5a1.5 1.5 0 0 0-3 0Z"
+                    fill="#212121" />
+                </svg>
+                shop</a></li>
+            <li><a>
+                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 1.999c5.524 0 10.002 4.478 10.002 10.002 0 5.523-4.478 10.001-10.002 10.001-5.524 0-10.002-4.478-10.002-10.001C1.998 6.477 6.476 1.999 12 1.999Zm-.004 8.25a1 1 0 0 0-.992.885l-.007.116.003 5.502.007.117a1 1 0 0 0 1.987-.002L13 16.75l-.003-5.501-.007-.117a1 1 0 0 0-.994-.882ZM12 6.5a1.251 1.251 0 1 0 0 2.503A1.251 1.251 0 0 0 12 6.5Z"
+                    fill="#212121" />
+                </svg>
+                about</a></li>
+            <li><a>
+                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M19.75 4A2.25 2.25 0 0 1 22 6.25v11.505a2.25 2.25 0 0 1-2.25 2.25H4.25A2.25 2.25 0 0 1 2 17.755V6.25A2.25 2.25 0 0 1 4.25 4h15.5Zm-10 8.5h-3.5a.75.75 0 0 0-.743.648l-.007.102v.492l.008.108C5.67 14.964 6.602 15.5 8 15.5c1.331 0 2.24-.486 2.464-1.494l.028-.155.008-.108v-.493a.75.75 0 0 0-.648-.743L9.75 12.5Zm8 .496h-4.498l-.102.007a.75.75 0 0 0 0 1.486l.102.007h4.498l.102-.007a.75.75 0 0 0 0-1.486l-.102-.007ZM8 8.502a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm9.75.998h-4.498l-.102.007a.75.75 0 0 0 0 1.486l.102.007h4.498l.102-.007a.75.75 0 0 0 0-1.486L17.75 9.5Z"
+                    fill="#212121" />
+                </svg>
+                contact</a></li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -89,12 +130,14 @@
     <div class="carousel w-full my-12 rounded-lg">
       <!-- Banner+Slider 1 -->
       <div id="slide1" class="carousel-item relative w-full">
-        <div class="hero min-h-full md:h-[500px] " style="background-image: url(./assets/images/banners/banner1.png);">
+        <div class="hero min-h-full h-[500px] w-full "
+          style="background-image: url(./assets/images/banners/banner1.png);">
           <div class="hero-overlay bg-opacity-0 bg-gradient-to-b from-black to-transparent"></div>
           <div class="hero-content text-center">
-            <div class="w-[70%]">
-              <h1 class="mb-5 text-7xl font-extrabold font-montserrat text-white">Fresh from the farm</h1>
-              <p class="mb-5 font-opensans text-white font-medium text-xl">Locally sourced fruits for the freshest taste
+            <div class="w-[75%] lg:w-full">
+              <h1 class="mb-5 text-5xl lg:text-7xl font-extrabold font-montserrat text-white">Fresh from the farm</h1>
+              <p class="mb-5 font-opensans text-white font-medium text-xl">Locally sourced fruits for the
+                freshest taste
               </p>
               <button
                 class="btn bg-accent font-montserrat font-extrabold border-transparent text-white capitalize text-lg">shop
@@ -109,11 +152,12 @@
       </div>
       <!-- Banner+Slider 2 -->
       <div id="slide2" class="carousel-item relative w-full">
-        <div class="hero min-h-full md:h-[500px] " style="background-image: url(./assets/images/banners/banner2.png);">
+        <div class="hero min-h-full h-[500px] w-full "
+          style="background-image: url(./assets/images/banners/banner2.png);">
           <div class="hero-overlay bg-opacity-0 bg-gradient-to-b from-black to-transparent"></div>
           <div class="hero-content text-center">
-            <div class="w-[70%]">
-              <h1 class="mb-5 text-7xl font-extrabold font-montserrat text-white">Healthy and delicious</h1>
+            <div class="w-[75%] lg:w-full">
+              <h1 class="mb-5 text-5xl lg:text-7xl font-extrabold font-montserrat text-white">Healthy and delicious</h1>
               <p class="mb-5 font-opensans text-white font-medium text-xl">Nourish your body with our selection of
                 fruits</p>
               <button
@@ -129,11 +173,12 @@
       </div>
       <!-- Banner+Slider 3 -->
       <div id="slide3" class="carousel-item relative w-full">
-        <div class="hero min-h-full md:h-[500px] " style="background-image: url(./assets/images/banners/banner3.png);">
+        <div class="hero min-h-full h-[500px] w-full "
+          style="background-image: url(./assets/images/banners/banner3.png);">
           <div class="hero-overlay bg-opacity-0 bg-gradient-to-b from-black to-transparent"></div>
           <div class="hero-content text-center">
-            <div class="w-[70%]">
-              <h1 class="mb-5 text-7xl font-extrabold font-montserrat text-white">Seasonal specials</h1>
+            <div class="w-[75%] lg:w-full">
+              <h1 class="mb-5 text-5xl lg:text-7xl font-extrabold font-montserrat text-white">Seasonal specials</h1>
               <p class="mb-5 font-opensans text-white font-medium text-xl">Discover our limited-time seasonal fruits</p>
               <button
                 class="btn bg-accent font-montserrat font-extrabold border-transparent text-white capitalize text-lg">shop
@@ -148,11 +193,12 @@
       </div>
       <!-- Banner+Slider 4 -->
       <div id="slide4" class="carousel-item relative w-full">
-        <div class="hero min-h-full md:h-[500px] " style="background-image: url(./assets/images/banners/banner4.png);">
+        <div class="hero min-h-full h-[500px] w-full "
+          style="background-image: url(./assets/images/banners/banner4.png);">
           <div class="hero-overlay bg-opacity-0 bg-gradient-to-b from-black to-transparent"></div>
           <div class="hero-content text-center">
-            <div class="w-[70%]">
-              <h1 class="mb-5 text-7xl font-extrabold font-montserrat text-white">Juicy and sweet</h1>
+            <div class="w-[75%] lg:w-full">
+              <h1 class="mb-5 text-5xl lg:text-7xl font-extrabold font-montserrat text-white">Juicy and sweet</h1>
               <p class="mb-5 font-opensans text-white font-medium text-xl">Satisfy your sweet tooth with our juicy
                 fruits</p>
               <button
@@ -169,7 +215,7 @@
     </div>
     <!-- Banner+Slider End -->
     <!-- Bottom Banner Start -->
-    <section class="relative mt-9">
+    <section class="hidden lg:block relative mt-9">
       <div class="container bg-white h-44 w-[1100px] rounded-lg grid grid-cols-5 p-5 absolute bottom-0 right-24
       drop-shadow-lg ">
         <div class=" flex flex-col items-center">
@@ -198,40 +244,45 @@
   </header>
   <main class="container mx-auto">
     <!-- DotD Section Start -->
-    <section class="my-32">
-      <div class="flex items-center justify-between">
+    <section class="lg:my-32">
+      <div class="flex items-center justify-between flex-col lg:flex-row text-center lg:text-left">
         <div class="w-2/3">
-          <h1 class="font-montserrat font-extrabold text-5xl text-blackish">Deal of the day</h1>
-          <p class="font-opensans font-medium text-base text-mute  my-4">Today's Special: Fresh and Juicy! Don't miss
-            out on our limited-time deal of the day.<br> Grab the tastiest fruits at unbeatable prices.
+          <h1 class="font-montserrat font-extrabold text-3xl md:text-5xl text-blackish">Deal of the day</h1>
+          <p class="font-opensans font-medium text-sm md:text-base text-mute  my-4 lg:w-4/5">Today's Special: Fresh and
+            Juicy!
+            Don't miss
+            out on our limited-time deal of the day. Grab the tastiest fruits at unbeatable prices.
           </p>
         </div>
         <div>
-          <h1 class="text-center mb-4 font-montserrat font-bold text-2xl text-primary">Hurry! Offer ends in:</h1>
+          <h1 class="text-center mb-5 md:mb-4 font-montserrat font-bold text-xl md:text-2xl text-primary mt-3 lg:mt-0">
+            Hurry!
+            Offer ends in:
+          </h1>
           <div class="grid grid-flow-col gap-5 text-center auto-cols-max capitalize font-opensans text-base text-mute">
             <div class="flex flex-col">
-              <span class="countdown font-montserrat font-extrabold text-5xl text-blackish">
+              <span class="countdown font-montserrat font-extrabold text-3xl md:text-5xl text-blackish">
                 <span style="--value:0;"></span>
               </span>
               days
             </div>
             <img class="text-3xl mt-3" src="./assets/images/icons/3dot.svg" alt="">
             <div class="flex flex-col">
-              <span class="countdown font-montserrat font-extrabold text-5xl text-blackish">
+              <span class="countdown font-montserrat font-extrabold text-3xl md:text-5xl text-blackish">
                 <span style="--value:23;"></span>
               </span>
               hours
             </div>
             <img class="text-3xl mt-3" src="./assets/images/icons/3dot.svg" alt="">
             <div class="flex flex-col">
-              <span class="countdown font-montserrat font-extrabold text-5xl text-blackish">
+              <span class="countdown font-montserrat font-extrabold text-3xl md:text-5xl text-blackish">
                 <span style="--value:59;"></span>
               </span>
               min
             </div>
             <img class="text-3xl mt-3" src="./assets/images/icons/3dot.svg" alt="">
             <div class="flex flex-col">
-              <span class="countdown font-montserrat font-extrabold text-5xl text-blackish">
+              <span class="countdown font-montserrat font-extrabold text-3xl md:text-5xl text-blackish">
                 <span style="--value:59;"></span>
               </span>
               sec
@@ -241,7 +292,7 @@
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-20">
         <!-- First Card -->
-        <div class="card w-full bg-base-100 shadow-xl rounded-lg border-[0.50px] border-solid ">
+        <div class="card w-full bg-base-100 md:shadow-xl rounded-lg border-[0.50px] border-solid ">
           <figure class="px-10 pt-10">
             <img src="./assets/images/dotd/fruit6.png" alt="apple" class="rounded-xl" />
           </figure>
@@ -295,7 +346,7 @@
           </div>
         </div>
         <!-- Second Card -->
-        <div class="card w-full bg-base-100 shadow-xl rounded-lg border-[0.50px] border-solid">
+        <div class="card w-full bg-base-100 md:shadow-xl rounded-lg border-[0.50px] border-solid">
           <figure class="px-10 pt-10">
             <img src="./assets/images/dotd/fruit7.png" alt="apple" class="rounded-xl" />
           </figure>
@@ -349,7 +400,7 @@
           </div>
         </div>
         <!-- Third Card -->
-        <div class="card w-full bg-base-100 shadow-xl rounded-lg border-[0.50px] border-solid">
+        <div class="card w-full bg-base-100 md:shadow-xl rounded-lg border-[0.50px] border-solid">
           <figure class="px-10 pt-10">
             <img src="./assets/images/dotd/fruit8.png" alt="dragon" class="rounded-xl" />
           </figure>
@@ -403,7 +454,7 @@
           </div>
         </div>
         <!-- Fourth Card -->
-        <div class="card w-full bg-base-100 shadow-xl rounded-lg border-[0.50px] border-solid">
+        <div class="card w-full bg-base-100 md:shadow-xl rounded-lg border-[0.50px] border-solid">
           <figure class="px-10 pt-10">
             <img src="./assets/images/dotd/fruit9.png" alt="banana" class="rounded-xl" />
           </figure>
@@ -473,9 +524,12 @@
           <div class="hero-overlay bg-opacity-30 bg-gradient-to-b from-black to-transparent rounded-lg"></div>
           <div class="hero-content text-center flex-col">
             <div class="mt-5">
-              <h1 class="mb-5 text-5xl font-extrabold font-montserrat text-white">Meet Our Fruit Gurus</h1>
-              <p class="mb-5 font-opensans text-white font-medium text-base">Meet the team behind our delicious fruit
-                offerings. From fruit sourcing to preparation, <br> our team members are dedicated to providing the best
+              <h1 class="mb-5 text-3xl md:text-5xl font-extrabold font-montserrat text-white">Meet Our Fruit Gurus</h1>
+              <p class="mb-5 font-opensans text-white font-medium text-base">Meet the team behind
+                our delicious
+                fruit
+                offerings. <br> From fruit sourcing to preparation, our team members are dedicated <br> to providing the
+                best
                 fruit experience for our customers.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -495,7 +549,7 @@
                 </div>
               </div>
               <!-- Second Card -->
-              <div class="card w-full ">
+              <div class="card w-full">
                 <figure class="px-10 pt-10">
                   <img src="./assets/images/team/member2.png" alt="apple" class="rounded-xl" />
                 </figure>
@@ -546,76 +600,84 @@
     </section>
     <!-- Team Section End -->
     <!-- Why Choose Us Section Start -->
-    <section class="my-10">
+    <section class="my-20 lg:my-20 md:mt-96">
       <div class="hero min-h-full">
         <div class="flex flex-col items-center text-center ">
           <div class="max-w-2xl mb-5">
-            <h1 class="text-5xl font-bold text-blackish">Why Choose Us</h1>
+            <h1 class="text-3xl md:text-5xl font-bold text-blackish pt-0 lg:pt-0 md:pt-20">Why Choose Us</h1>
             <p class="py-6 text-base font-opensans font-medium text-mute">At our fruit shop, we are dedicated to
               providing the freshest and highest quality fruits to our customers. Here are some reasons why you should
               choose us for your fruit needs:</p>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-3">
-            <div class="wcu-left">
-              <div class="flex">
-                <img class="mb-16" src="./assets/images/icons/dt.svg">
-                <div class="text-left p-5">
-                  <h3 class="font-montserrat font-extrabold text-2xl text-blackish">Dedicated Team</h3>
-                  <img class="my-3" src="./assets/images/icons/line.svg">
-                  <p class="font-opensans font-medium text-sm text-mute">
+          <div class="grid grid-cols-1 lg:grid-cols-3 place-items-center">
+            <div class="wcu-left order-2 lg:order-1">
+              <div class="flex flex-col lg:flex-row items-center">
+                <img class="lg:mb-16 w-1/5 " src="./assets/images/icons/dt.svg">
+                <div class="text-center lg:text-left p-5 flex flex-col items-center lg:items-start">
+                  <h3 class="font-montserrat font-extrabold text-3xl md:text-5xl lg:text-2xl text-blackish">Dedicated
+                    Team</h3>
+                  <img class=" my-5 lg:my-3 block" src="./assets/images/icons/line.svg">
+                  <p class="font-opensans font-medium text-xl lg:text-sm text-mute md:w-[55%] lg:w-full">
                     Our dedicated team of experts ensures exceptional craftsmanship and customer satisfaction.
                   </p>
                 </div>
               </div>
-              <div class="flex">
-                <img class="mb-16" src="./assets/images/icons/fib.svg">
-                <div class="text-left p-5">
-                  <h3 class="font-montserrat font-extrabold text-2xl text-blackish">Fresh is Best</h3>
-                  <img class="my-3" src="./assets/images/icons/line.svg">
-                  <p class="font-opensans font-medium text-sm text-mute">
+              <div class="flex flex-col lg:flex-row items-center">
+                <img class="lg:mb-16 w-1/5 " src="./assets/images/icons/fib.svg">
+                <div class="text-center lg:text-left p-5 flex flex-col items-center lg:items-start">
+                  <h3 class="font-montserrat font-extrabold text-3xl md:text-5xl lg:text-2xl text-blackish">Fresh is
+                    Best</h3>
+                  <img class=" my-5 lg:my-3 block" src="./assets/images/icons/line.svg">
+                  <p class="font-opensans font-medium text-xl lg:text-sm text-mute md:w-[55%] lg:w-full">
                     Our dedicated team of experts ensures exceptional craftsmanship
                   </p>
                 </div>
               </div>
-              <div class="flex">
-                <img class="mb-16" src="./assets/images/icons/gc.svg">
-                <div class="text-left p-5">
-                  <h3 class="font-montserrat font-extrabold text-2xl text-blackish">Gift Certificates</h3>
-                  <img class="my-3" src="./assets/images/icons/line.svg">
-                  <p class="font-opensans font-medium text-sm text-mute">
+              <div class="flex flex-col lg:flex-row items-center">
+                <img class="lg:mb-16 w-1/5" src="./assets/images/icons/gc.svg">
+                <div class="text-center lg:text-left p-5 flex flex-col items-center lg:items-start">
+                  <h3 class="font-montserrat font-extrabold text-3xl md:text-5xl lg:text-2xl text-blackish">Gift
+                    Certificates</h3>
+                  <img class=" my-5 lg:my-3 block" src="./assets/images/icons/line.svg">
+                  <p class="font-opensans font-medium text-xl lg:text-sm text-mute md:w-[55%] lg:w-full">
                     Our dedicated team of experts ensures exceptional craftsmanship
                   </p>
                 </div>
               </div>
             </div>
-            <div class="wcu-img mt-7"><img src="./assets/images/whychoose1.png" alt="wcu"></div>
-            <div class="wcu-right">
-              <div class="flex flex-row-reverse">
-                <img class="mb-8" src="./assets/images/icons/is.svg">
-                <div class="text-right p-5 flex flex-col items-end ">
-                  <h3 class="font-montserrat font-extrabold text-2xl text-blackish">Integrated Supplier</h3>
-                  <img class="my-3" src="./assets/images/icons/line.svg">
-                  <p class="font-opensans font-medium text-sm text-mute">
+            <div class="wcu-img my-10 lg:mt-7 lg:mb-0 order-1 lg:order-2"><img src="./assets/images/whychoose1.png"
+                alt="wcu">
+            </div>
+            <div class="wcu-right order-3">
+              <div class="flex flex-col lg:flex-row-reverse items-center">
+                <img class="lg:mb-8 w-1/5" src="./assets/images/icons/is.svg">
+                <div class="text-center lg:text-right p-5 flex flex-col items-center lg:items-end">
+                  <h3 class="font-montserrat font-extrabold text-3xl md:text-5xl lg:text-2xl text-blackish">Integrated
+                    Supplier</h3>
+                  <img class=" my-5 lg:my-3 block" src="./assets/images/icons/line.svg">
+                  <p class="font-opensans font-medium text-xl lg:text-sm text-mute md:w-[55%] lg:w-full">
                     Our dedicated team of experts ensures exceptional craftsmanship
                   </p>
                 </div>
               </div>
-              <div class="flex flex-row-reverse">
-                <img class="mb-8" src="./assets/images/icons/sp.svg">
-                <div class="text-right p-5 flex flex-col items-end">
-                  <h3 class="font-montserrat font-extrabold text-2xl text-blackish">Sustainable Practice</h3>
-                  <img class="my-3" src="./assets/images/icons/line.svg">
-                  <p class="font-opensans font-medium text-sm text-mute">
+              <div class="flex flex-col lg:flex-row-reverse items-center">
+                <img class="lg:mb-8 w-1/5" src="./assets/images/icons/sp.svg">
+                <div class="text-center lg:text-right p-5 flex flex-col items-center lg:items-end">
+                  <h3 class="font-montserrat font-extrabold text-3xl md:text-5xl lg:text-2xl text-blackish">Sustainable
+                    Practice</h3>
+                  <img class=" my-5 lg:my-3 block" src="./assets/images/icons/line.svg">
+                  <p class="font-opensans font-medium text-xl lg:text-sm text-mute md:w-[55%] lg:w-full">
                     Our dedicated team of experts ensures exceptional craftsmanship
                   </p>
                 </div>
               </div>
-              <div class="flex flex-row-reverse">
-                <img class="mb-8" src="./assets/images/icons/tbo.svg">
-                <div class="text-right p-5 flex flex-col items-end ">
-                  <h3 class="font-montserrat font-extrabold text-2xl text-blackish">The Benefits Only</h3>
-                  <img class="my-3" src="./assets/images/icons/line.svg">
-                  <p class="font-opensans font-medium text-sm text-mute">
+              <div class="flex flex-col lg:flex-row-reverse items-center">
+                <img class="lg:mb-8 w-1/5" src="./assets/images/icons/tbo.svg">
+                <div class="text-center lg:text-right p-5 flex flex-col items-center lg:items-end">
+                  <h3 class="font-montserrat font-extrabold text-3xl md:text-5xl lg:text-2xl text-blackish">The Benefits
+                    Only</h3>
+                  <img class=" my-5 lg:my-3 block" src="./assets/images/icons/line.svg">
+                  <p class="font-opensans font-medium text-xl lg:text-sm text-mute md:w-[55%] lg:w-full">
                     Our dedicated team of experts ensures exceptional craftsmanship
                   </p>
                 </div>
@@ -632,7 +694,7 @@
       <img class="md:w-11 w-9" src="./assets/logo.png" alt="logo"><a
         class="font-montserrat font-bold text-white normal-case text-2xl md:text-4xl">FruitPicks</a>
     </div>
-    <div class="grid grid-flow-col gap-4 text-gray-400">
+    <div class="flex flex-wrap items-center justify-between lg:text-gray-400 text-white text-xl text-center md:gap-6">
       <a class="link link-hover">Home</a>
       <a class="link link-hover">Shop</a>
       <a class="link link-hover">Privacy Policy</a>
@@ -650,8 +712,11 @@
       </div>
     </div>
     <div>
-      <p class="text-gray-400">Copyright &copy; 2023 FruitPicks. Designed by
-        <a class="link link-hover text-primary" href="https://github.com/devbytemehedi" target="_blank">Mehedi Hasan</a>
+      <p class="text-white lg:text-gray-400 text-lg mb-7">Copyright &copy; 2023 FruitPicks. All rights reserved.
+      </p>
+      <p class="font-opensans font-bold text-white text-xl pt-4">Designed by
+        <a class="link link-hover text-primary" href="https://github.com/devbytemehedi" target="_blank">Mehedi
+          Hasan</a>
       </p>
     </div>
     <div>
